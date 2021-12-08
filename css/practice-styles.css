@@ -1,0 +1,49 @@
+body {
+    background: pink;
+    font-family: cursive, Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: olive;
+    font: 32px fantasy, Helvetica, serif;
+}
+
+table {
+    width: 17%;
+    padding: 5px;
+    border: olive 3px dotted;
+    margin: auto;
+}
+
+thead {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+#submit-btn {
+    display: block;
+    margin: 25px auto;
+    background-color: olive;
+}
+
+label {
+    margin: 15px auto;
+}
+
+#submitreview {
+    width: 17%;
+    padding: 5px;
+    border: olive 3px solid;
+    margin: 20px auto;
+}
+
+#contactinfo {
+    width: 17%;
+    padding: 1px 10px 20px;
+    border: olive 3px dashed;
+    margin: 20px auto;
+}

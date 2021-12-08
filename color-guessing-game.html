@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>Color Guessing Game</title>
+<body>
+    <h1>Color Guessing Game</h1>
+    <button type="button" onclick="runGame()">Start Game</button>
+    <script>
+        const COLORS_ARRAY = ['blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow']
+        function runGame() {
+            let guess = '';
+            let correct = false;
+            let numTries = 0;
+            const targetIndex = Math.floor(Math.random() * COLORS_ARRAY.length);
+            const target = COLORS_ARRAY[targetIndex];
+
+            do {
+                guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY.join(', ') + '\n\nWhat color am I thinking of?\n');
+                if (guess === null) {
+                    alert('Game Over');
+                    return;
+                }
+                numTries += 1;
+                correct = checkGuess(guess, target);
+            } while (!correct)
+            alert('Winner winner chicken dinner \n\nIt took you ' + numTries + ' tries to guess the right color.');
+            document.body.style.background = guess;
+            }
+
+        function checkGuess(guess, target) {
+            let correct = false;
+            if (!COLORS_ARRAY.includes(guess)) {
+                alert('That color is not in the list');
+            } else if (guess > target) {
+                alert('Your color is alphabetically higher than mine');
+            } else if (guess < target) {
+                alert('Your color is alphabetically lower than mine');
+            } else {
+                correct = true;
+            }
+
+            return correct;
+        }
+    </script>
+</body>
+</html>

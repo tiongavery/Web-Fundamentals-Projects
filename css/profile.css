@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: black 4px solid;
+}
+
+body {
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+a {
+    margin: 25px;
+    border: black 1px dotted;
+}
+
+h2 {
+    border: black 2px dashed;
+}
